@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Studievoortgang</string>
     <string name="login_button">Login</string>
+    <string name="propedeuse">Propedeuse - Jaar 1</string>
+    <string name="jaar2">Hoofdfase - Jaar 2</string>
+    <string name="jaar34">Hoofdfase - Jaar 3 en 4</string>
+    <string name="minor">Hoofdfase - Minor"</string>
+    <string name="keuzemodulen">Hoofdfase - Keuzemodulen</string>
 </resources>
