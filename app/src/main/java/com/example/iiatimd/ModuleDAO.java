@@ -9,12 +9,12 @@ import java.util.List;
 @Dao
 public interface ModuleDAO {
 
-    @Query("SELECT * FROM module")
+    @Query("SELECT * FROM Module")
     List<Module> getAll();
 
     @Insert
-    void insertModule(Module module);
+    void insertModule(Module modulen);
 
     @Delete
-    void delete(Module module);
+    void delete(Module modulen);
 }

@@ -2,9 +2,19 @@ package com.example.iiatimd;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
 public class Jaar1Activity extends AppCompatActivity {
 
@@ -22,16 +32,12 @@ public class Jaar1Activity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.hasFixedSize();
 
-        Module[] modulen = new Module[3];
+    };
 
-        modulen[0] = new Module("IPMEDT1", 6, "propedeuse", "6,9", 0);
-        modulen[1] = new Module("IMHTB", 3, "propedeuse", "7,5", 1);
-        modulen[2] = new Module("IOPR1", 4, "propedeuse", "8,6", 2);
+    //recyclerView.setAdapter(recyclerViewAdapter);
 
-        recyclerViewAdapter = new ModuleAdapter(modulen);
-        recyclerView.setAdapter(recyclerViewAdapter);
+    //AppDatabase db = AppDatabase.getInstance(getApplicationContext());
 
-        AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "ModuleDB").build();
-
-    }
+    //new Thread(new InsertModuleTask(db)).start();
+    //new Thread(new GetModuleTask(db)).start();
 }
